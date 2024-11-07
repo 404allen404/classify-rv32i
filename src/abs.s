@@ -21,7 +21,8 @@ abs:
     lw t0 0(a0)
     bge t0, zero, done
 
-    # TODO: Add your own implementation
+    xori t0, t0, 0xFFF
+    addi t0, t0, 0x1
 
 done:
     # Epilogue
