@@ -21,8 +21,9 @@ abs:
     lw t0 0(a0)
     bge t0, zero, done
 
-    xori t0, t0, 0xFFF
+    xori t0, t0, -1
     addi t0, t0, 0x1
+    sw t0, 0(a0)
 
 done:
     # Epilogue
