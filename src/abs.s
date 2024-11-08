@@ -15,16 +15,11 @@
 #   None - The operation modifies the value at the pointer address
 # =================================================================
 abs:
-    # Prologue
-    ebreak
-    # Load number from memory
-    lw t0 0(a0)
+    lw t0 0(a0)        # load number from memory
     bge t0, zero, done
-
     xori t0, t0, -1
-    addi t0, t0, 0x1
+    addi t0, t0, 1
     sw t0, 0(a0)
 
 done:
-    # Epilogue
     jr ra
