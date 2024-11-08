@@ -31,8 +31,8 @@ dot:
     blt a3, t0, error_terminate   
     blt a4, t0, error_terminate  
 
-    li t0, 0            
-    li t1, 0         
+    add t0, x0, x0 # t0 = res
+    add t1, x0, x0 # t1 = i         
 
 loop_start:
     bge t1, a2, loop_end
